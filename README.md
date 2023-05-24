@@ -21,7 +21,7 @@ To run the web-based 3D model viewer, you need the following:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/3d-model-viewer.git
+git clone https://github.com/eykyu=dev/model-viewer.git
 
 2. Open the `index.html` file in your web browser.
 
