@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>Assignment 4</h1>
+            <h2>Lighting & Shading | <a
+                    href="https://canvas.ucdavis.edu/courses/595787/assignments/718397">Instructions</a></h2>
+        </div>
+        <div class="settings-container">
+            <div class="modes-container">
+                <h3>Camera Mode</h3>
+                <div class="modes">
+                    <div id="fpsCamMode" class="indicator inactive">FPS</div>
+                    <div id="statCamMode" class="indicator inactive">Stationary</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Projection Mode</h3>
+                <div class="modes">
+                    <div id="perspProjMode" class="indicator inactive">[P]erspective</div>
+                    <div id="orthoProjMode" class="indicator inactive">[O]rthographic</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <!-- do ids stack? -->
+                <h3>Selection</h3>
+                <div class="modes">
+                    <div id="selectionRaycasting" class="indicator inactive">[R]aycast</div>
+                    <div id="selectionTarget" class="indicator inactive">No Target Selected</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Shading</h3>
+                <div class="modes">
+                    <div id="flatShading" class="indicator inactive">[f] Flat Wireframe</div>
+                    <div id="gShading" class="indicator inactive">[g] Gourand Wireframe</div>
+                    <div id="pShading" class="indicator inactive">[p] Phong Wireframe</div>
+                </div>
+            </div>
+            <div class="modes-container">
+                <h3>Lights</h3>
+                <div class="modes">
+                    <select id="lightslist">
+                        <option value="1" selected="selected">>Light 1</option>
+                        <option value="2">Light 2</option>
+                        <option value="3">Light 3</option>
+                    </select>
+                </div>
+            </div>
+            <div><br><br><br>
+                <label for="fname">Ambient:</label>
+                <input type="text" id="lighta" name="fname" value=""><br>
+                <label for="fname">Id:</label>
+                <input type="text" id="lightd" name="fname" value=""><br>
+                <label for="fname">Is:</label>
+                <input type="text" id="lights" name="fname" value=""><br>
+                <label for="fname">Pos:</label>
+                <input type="text" id="lightpos" name="fname" value=""><br><br>
+            </div>
+        </div>
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script src="lib/gl-matrix-min.js"></script>
+    <script type="text/javascript">
+        const {mat2, mat3, mat4, vec2, vec3, vec4, quat} = glMatrix;
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

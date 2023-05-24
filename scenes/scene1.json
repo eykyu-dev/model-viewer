@@ -1,0 +1,111 @@
+{
+    "camera": {
+        "type": "perspective",
+        "position": [0,0,-6],
+        "lookat": [0,0,0],
+        "up": [0,1,0],
+        "fov": 80
+    },
+    "lights": {
+        "ambient": [0.7, 0.7, 0.7],
+        "point_lights": [
+            {
+                "position": [0, 2, 0],
+                "Id": [0.8, 0.8, 0.8],
+                "Is": [1, 1, 1],
+                "k": 0.01
+            },
+            {
+                "position": [0, 0.5, -1],
+                "Id": [1, 0.4, 0.1],
+                "Is": [1, 1, 1],
+                "k": 0.001
+            }
+        ],
+        "directional_lights": [
+            {
+                "direction": [0, -2, 0],
+                "Id": [0.9, 0.6, 0.6],
+                "Is": [1, 1, 1]
+            }
+        ]
+    },
+    "root": {
+        "name": "node0",
+        "type": "node",
+        "translation": [0,0,0],
+        "rotation": [0,0,0],
+        "scale": [1,1,1],
+        "children": [
+            {
+                "name": "plane",
+                "type": "object",
+                "obj": "../objects/plane.obj",
+                "color": "#022851",
+                "translation": [0,-1.0,0],
+                "rotation": [0,0,0],
+                "scale": [25,25,25],
+                "children": []
+            },
+            {
+                "name": "node1",
+                "type": "node",
+                "translation": [0,0,0],
+                "rotation": [0,0,0],
+                "scale": [1,1,1],
+                "children": [
+                    {
+                        "name": "cube",
+                        "type": "object",
+                        "obj": "../objects/cube.obj",
+                        "color": "#33F0FF",
+                        "translation": [-5,-0.2,-1.2],
+                        "rotation": [0,0,0],
+                        "scale": [0.8,0.8,0.8],
+                        "children": []
+                    },
+                    {
+                        "name": "pyramid",
+                        "type": "object",
+                        "obj": "../objects/pyramid.obj",
+                        "color": "#fcba03",
+                        "translation": [-0.5,0,-0.8],
+                        "rotation": [0,0,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "sphere",
+                        "type": "object",
+                        "obj": "../objects/sphere.obj",
+                        "color": "#ab0eab",
+                        "translation": [-4,0,1.5],
+                        "rotation": [0,-60,0],
+                        "scale": [1,1,1],
+                        "children": []
+                    },
+                    {
+                        "name": "table",
+                        "type": "object",
+                        "obj": "../objects/table.obj",
+                        "color": "#523f38",
+                        "translation": [1.8,-1,-3.5],
+                        "rotation": [0,-30,0],
+                        "scale": [0.7,0.7,0.7],
+                        "children": []
+                    },
+                    {
+                        "name": "teapot",
+                        "type": "object",
+                        "obj": "../objects/teapot.obj",
+                        "color": "#1ea896",
+                        "translation": [2,0.2,-3.5],
+                        "rotation": [0,-120,0],
+                        "scale": [1.5,1.5,1.5],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}
