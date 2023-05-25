@@ -55,11 +55,6 @@
             document.getElementById("lightd").value = this.app.lights[0].Id;
             document.getElementById("lights").value = this.app.lights[0].Is;
             document.getElementById("lightpos").value = this.app.lights[0].position;
-            this.a = document.getElementById("lighta").value
-            this.d = document.getElementById("lightd").value
-            this.s = document.getElementById("lights").value
-            this.p = document.getElementById("lightpos").value
-            this.ind = document.getElementById("lightslist").value;
         }
 
         /**
