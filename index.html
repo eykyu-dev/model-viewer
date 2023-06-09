@@ -9,9 +9,8 @@
 
 <body>
     <div id="app">
-        <div id="header-container">
-            <h1>3D Model Viewer</h1>
-            <h2>created by Ethan Yu</h2>
+        <div id="webgl-container">
+            <canvas id="canvas"></canvas>
         </div>
         <div class="settings-container">
             <div class="modes-container">
@@ -44,29 +43,6 @@
                     <div id="pShading" class="indicator inactive">[p] Phong Wireframe</div>
                 </div>
             </div>
-            <div class="modes-container">
-                <h3>Lights</h3>
-                <div class="modes">
-                    <select id="lightslist">
-                        <option value="1" selected="selected">>Light 1</option>
-                        <option value="2">Light 2</option>
-                        <option value="3">Light 3</option>
-                    </select>
-                </div>
-            </div>
-            <div><br><br><br>
-                <label for="fname">Ambient:</label>
-                <input type="text" id="lighta" name="fname" value=""><br>
-                <label for="fname">Id:</label>
-                <input type="text" id="lightd" name="fname" value=""><br>
-                <label for="fname">Is:</label>
-                <input type="text" id="lights" name="fname" value=""><br>
-                <label for="fname">Pos:</label>
-                <input type="text" id="lightpos" name="fname" value=""><br><br>
-            </div>
-        </div>
-        <div id="webgl-container">
-            <canvas id="canvas"></canvas>
         </div>
     </div>
     <noscript>You need to enable JavaScript to view the full site.</noscript>

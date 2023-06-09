@@ -45,16 +45,6 @@
                 }
 
             }
-
-            // update ui with default values
-            this.updateUI( "camera_mode", "stationary" )
-            this.updateUI( "shading", "flat" )
-            this.updateUI( "projection_mode", "perspective" )
-            this.updateUI( "selection", "target" )
-            document.getElementById("lighta").value = this.app.lights[0].ambient;
-            document.getElementById("lightd").value = this.app.lights[0].Id;
-            document.getElementById("lights").value = this.app.lights[0].Is;
-            document.getElementById("lightpos").value = this.app.lights[0].position;
         }
 
         /**
@@ -100,27 +90,10 @@
 
             if (this.is_selecting && this.app.movement.selected_object)
                 this.updateUI("selection", "target", "Selected '"+this.app.movement.selected_object.name+"'")
-            
-            if(this.a != document.getElementById("lighta").value || this.d != document.getElementById("lightd").value || this.s != document.getElementById("lights").value || this.p != document.getElementById("lightpos").value)
-            {
-                this.sendLightValues(document.getElementById("lightslist").value)
-                this.a = document.getElementById("lighta").value
-                this.d = document.getElementById("lightd").value
-                this.s = document.getElementById("lights").value
-                this.p = document.getElementById("lightpos").value
-            }
-            if(this.ind != document.getElementById("lightslist").value)
-            {
-                this.updateLights(document.getElementById("lightslist").value)
-            }
         }
 
         sendLightValues(index)
         {
-            let a = document.getElementById("lighta").value.split(",")
-            let d = document.getElementById("lightd").value.split(",")
-            let s = document.getElementById("lights").value.split(",")
-            let p = document.getElementById("lightpos").value.split(",")
             let ambient_new = vec3.fromValues(a[0], a[1], a[2])
             let diffuse_new = vec3.fromValues(d[0], d[1], d[2])
             let spec_new = vec3.fromValues(s[0], s[1], s[2])
@@ -140,9 +113,6 @@
         }
         updateLights(index)
         {
-            document.getElementById("lighta").value = this.app.lights[index-1].ambient;
-            document.getElementById("lightd").value = this.app.lights[index-1].Id;
-            document.getElementById("lights").value = this.app.lights[index-1].Is;
             if(this.app.lights[index-1].type == "point")
             {
                 document.getElementById("lightpos").value = this.app.lights[index-1].position;

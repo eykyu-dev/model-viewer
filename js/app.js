@@ -28,7 +28,7 @@ class App
         this.flat_shader = new Shader( this.gl, "../shaders/flat.vert.glsl", "../shaders/flat.frag.glsl" )
         this.g_shader = new Shader( this.gl, "../shaders/g.vert.glsl", "../shaders/g.frag.glsl" )
         this.p_shader = new Shader( this.gl, "../shaders/p.vert.glsl", "../shaders/p.frag.glsl" )
-        this.shader = this.flat_shader
+        this.shader = this.g_shader
 
         // camera
         this.camera = scene.camera

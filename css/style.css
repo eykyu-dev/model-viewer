@@ -11,36 +11,42 @@ html, body {
 }
 
 header {
-    background-color: yellow;
+    background-color: #EDF1D6;
 }
 h1{
-    font-weight: 300;
+    font-weight: 500;
 }
 
 h2{
-    font-weight: 200;
+    font-weight: 300;
 }
 #header-container {
-    margin: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #app {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #ffecc2;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    
+    
 }
 
-#webgl-container {
-    height: 100%;
-    width: 100%;
-}
 
 #canvas {
-    width: 100vw;
-    height: calc(100*0.56vw);
+    width: 1366px;
+    height: 768px;
     margin: auto auto;
-    background-color: white;
+    border-radius: 50px;
+    background-color: #606C5D;
 }
 
 .settings-container {
@@ -48,9 +54,16 @@ h2{
     background-color: #fff8e9;
     display: flex;
     flex-direction: row;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15vw;
+    margin-right:15vw;
 }
 
 .modes-container {
+    display: flex;
+    align-items: center;
     flex-direction: column;
     margin: 1em;
     align-content: center;
